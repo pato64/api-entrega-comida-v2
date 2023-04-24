@@ -51,4 +51,32 @@ public class Order {
     public double getTotal() {
         return items.stream().mapToDouble(Food::getPrecio).sum();
     }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setCreationTime(LocalDateTime creationTime) {
+        this.creationTime = creationTime;
+    }
+
+    public void setEstimatedDeliveryTime(LocalDateTime estimatedDeliveryTime) {
+        this.estimatedDeliveryTime = estimatedDeliveryTime;
+    }
+
+    public void setItems(List<Food> items) {
+        this.items = items;
+    }
 }
