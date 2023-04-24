@@ -6,6 +6,7 @@ import com.example.jhonnypereztapia.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -13,6 +14,15 @@ import java.util.List;
 public class OrderController {
     @Autowired
     private OrderService orderService;
+
+    private List<Food> menu = new ArrayList<>();
+
+    public OrderController() {
+        menu.add(new Food("hamburguesa", "un pan de hamburguesa con carne, huevo, tomate,queso ", 8.00));
+        menu.add(new Food("Chicha morada", "Bebida popular en el Peru dulce y deliciosa", 15.20));
+        menu.add(new Food("tequeños", "rrellenos de salchicha estan buenos", 8.00));
+        menu.add(new Food("salchipapa", "combinado entre papas y salchicha con cremas al gusto", 12.00));
+    }
 
     @GetMapping("")
     public List<Order> getOrders() {
