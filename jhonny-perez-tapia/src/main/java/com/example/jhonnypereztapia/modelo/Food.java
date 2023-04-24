@@ -8,9 +8,9 @@ public class Food {
     private double precio;
 
     public Food(String nombre, String descripcion, double precio) {
-        setNombre(nombre);
-        setDescripcion(descripcion);
-        setPrecio(precio);
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
     }
 
     public String getNombre() {
@@ -39,7 +39,7 @@ public class Food {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrice(double precio) {
         if (precio < 0) {
             throw new IllegalArgumentException("el precio no puede ser negativo");
         }
