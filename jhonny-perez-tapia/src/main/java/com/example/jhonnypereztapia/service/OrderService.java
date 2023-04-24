@@ -5,9 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.stereotype.Service;
+
 import com.example.jhonnypereztapia.modelo.Food;
 import com.example.jhonnypereztapia.modelo.Order;
 
+@Service
 public class OrderService {
     private List<Order> orders = new ArrayList<>();
 
